@@ -20,7 +20,7 @@
                 return;
               }
           
-              const response = await fetch('https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/auth/getUsser', {
+              const response = await fetch('http://localhost:3001/auth/getUsser', {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
@@ -61,12 +61,14 @@
 
       return (
       <div style={style}>
-                       <ins className="adsbygoogle"
-     style="display:block"
+            <ins className="adsbygoogle"
+     style={{ display: 'block' }}
      data-ad-client="ca-pub-5376507826502015"
      data-ad-slot="1831284933"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-full-width-responsive="true">
+</ins>
+
       </div>
       );
       };
