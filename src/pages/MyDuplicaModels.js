@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import GoogleAds from "../components/GoogleAds";
 
 export default function MyDuplicaModels() {
   const navigate = useNavigate();
@@ -187,6 +188,7 @@ console.log("selectedFolderId", selectedFolderId)
 
   return (
     <div className="flex-1 flex flex-col p-8">
+     <GoogleAds adSlot="2648708436" />
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-white text-3xl font-bold">My Duplica Models</h1>
         <div>
