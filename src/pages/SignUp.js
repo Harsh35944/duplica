@@ -18,7 +18,7 @@ export default function SignUp() {
     setSuccess("");
     const data = { email, password, firstName, lastName };
     try {
-      const res = await axios.post("https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/auth/register", data);
+      const res = await axios.post("https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.appp/auth/register", data);
       if (res.data.access_token) {
         localStorage.setItem("token", res.data.access_token);
         setSuccess("Registration successful!");
