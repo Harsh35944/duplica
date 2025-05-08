@@ -33,9 +33,9 @@ export default function GenerateImages() {
       let endpoint 
       
       if (viewMode === 'public') {
-        endpoint = 'http://localhost:3001/generate/public/' ;
+        endpoint = 'https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/public/' ;
       } else if (viewMode === 'gallery') {
-        endpoint = 'http://localhost:3001/generate/gallery/' ;
+        endpoint = 'https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/gallery/' ;
       }
       console.log('Fetching from endpoint:', endpoint);
 
@@ -63,7 +63,7 @@ export default function GenerateImages() {
   const fetchFolders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3001/generate/folders', {
+      const response = await axios.get('https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/folders', {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
