@@ -1,7 +1,7 @@
       import React, { useEffect, useState } from 'react';
 
       const GoogleAds = ({ adSlot, adFormat = 'auto', style = {} }) => {
-      const [isSubscribed, setIsSubscribed] = useState(false);
+      const [isSubscribed, setIsSubscribed] = useState(null);
 
       useEffect(() => {
       // Check if user is subscribed
@@ -20,7 +20,7 @@
                 return;
               }
           
-              const response = await fetch('http://localhost:3001/auth/getUsser', {
+              const response = await fetch('http://localhost:3001/auth/getUser', {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
