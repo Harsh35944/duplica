@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:3001/auth/llogin", { email, password });
+      const res = await axios.post("http://localhost:3001/auth/login", { email, password });
       if (res.data.access_token) {
         localStorage.setItem("token", res.data.access_token);
         navigate("/");
