@@ -27,7 +27,7 @@ const FolderDetail = () => {
           throw new Error('No authentication token found');
         }
 
-        const response = await axios.get(`https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/folders/name/${folderName}`, {
+        const response = await axios.get(`https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/folders/name/${folderName}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
