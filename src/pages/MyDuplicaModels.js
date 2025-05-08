@@ -36,7 +36,7 @@ console.log("selectedFolderId", selectedFolderId)
       setError("");
       
       // Fetch folders
-      const foldersRes = await axios.get("http://localhost:3001/training/folders", {
+      const foldersRes = await axios.get("https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/folders", {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ console.log("selectedFolderId", selectedFolderId)
       }
 
       // Fetch models
-      const modelsRes = await axios.get("http://localhost:3001/training/models", {
+      const modelsRes = await axios.get("https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/models", {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -140,7 +140,7 @@ console.log("selectedFolderId", selectedFolderId)
       for (const model of selectedModels) {
         console.log("Moving model:", model);
         const response = await axios.post(
-          `http://localhost:3001/training/folders/${selectedFolderId}/models`,
+          `https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/folders/${selectedFolderId}/models`,
           {
             trainingId: model._id, // Use the model's _id instead of trainingId
             modelName: model.modelName,
