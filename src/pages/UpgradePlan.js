@@ -63,7 +63,7 @@ export default function UpgradePlan() {
   const fetchPrices = async () => {
     try {
       console.log('Fetching subscription prices...');
-      const response = await axios.get('http://localhost:3001/subscription/prices');
+      const response = await axios.get('https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/subscription/prices');
       console.log('Prices response:', response.data);
 
       setPlans(prevPlans => {
@@ -103,7 +103,7 @@ export default function UpgradePlan() {
       }
 
       console.log('Fetching subscription status...');
-      const response = await axios.get('http://localhost:3001/subscription/status', {
+      const response = await axios.get('https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/subscription/status', {
         headers: {
           Authorization: `Bearer ${token}`
         }
