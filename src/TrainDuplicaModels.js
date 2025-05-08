@@ -47,7 +47,7 @@ export default function TrainDuplicaModels() {
         formData.append('inputImages', file);
       });
 
-      const res = await axios.post("http://localhost:3001/training/trainings", formData, {
+      const res = await axios.post("https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/trainings", formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           // Don't set Content-Type, let the browser set it with the boundary
