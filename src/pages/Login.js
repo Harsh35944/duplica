@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     setError("");
     try {
-      const res = await axios.post("http://localhost:3001/auth/login", { email, password });
+      const res = await axios.post("   https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/auth/login", { email, password });
       if (res.data.access_token) {
         localStorage.setItem("token", res.data.access_token);
         navigate("/");
