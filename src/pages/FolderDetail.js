@@ -27,7 +27,7 @@ const FolderDetail = () => {
           throw new Error('No authentication token found');
         }
 
-        const response = await axios.get(`http://localhost:3001/training/folders/name/${folderName}`, {
+        const response = await axios.get(`https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/folders/name/${folderName}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -63,7 +63,7 @@ const FolderDetail = () => {
 
       // Note: You'll need to implement this endpoint in your backend
       await axios.delete(
-        `http://localhost:3001/training/folders/${folderName}/models/${modelId}`,
+        `https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/folders/${folderName}/models/${modelId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -72,7 +72,7 @@ const FolderDetail = () => {
       );
 
       // Refresh folder data
-      const response = await axios.get(`http://localhost:3001/training/folders/name/${folderName}`, {
+      const response = await axios.get(`https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/training/folders/name/${folderName}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
