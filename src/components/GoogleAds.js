@@ -5,7 +5,7 @@
 
       useEffect(() => {
       // Check if user is subscribed
-  const checkSubscription = async () => {
+      const checkSubscription = async () => {
             try {
               // Dummy simulation for testing
               const simulateDummy = true;
@@ -64,7 +64,7 @@
             <ins
             className="adsbygoogle"
             style={{ display: 'block' }}
-            data-ad-client="ca-pub-YOUR_PUBLISHER_ID" // Replace with your Google Ads publisher ID
+            data-ad-client="ca-pub-5376507826502015" // Replace with your Google Ads publisher ID
             data-ad-slot={adSlot}
             data-ad-format={adFormat}
             data-full-width-responsive="true"
