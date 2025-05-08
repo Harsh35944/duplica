@@ -64,7 +64,7 @@
             <ins className="adsbygoogle"
      style={{ display: 'block' }}
      data-ad-client="ca-pub-5376507826502015"
-     data-ad-slot="1831284933"
+     data-ad-slot={adSlot}
      data-ad-format="auto"
      data-full-width-responsive="true">
 </ins>
