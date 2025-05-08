@@ -22,7 +22,7 @@ const aiImages = [
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col p-8">
-      <GoogleAds adSlot="1234567890" />
+      <GoogleAds adSlot="1831284933" />
       <h1 className="text-white text-3xl font-bold mb-6">Home Page</h1>
       {/* Feature Model Carousel */}
       <div className="mb-10">
