@@ -26,7 +26,7 @@ const FolderImages = () => {
 
         console.log('Calling API to fetch folder images...', folderId);
 
-        const response = await axios.get(`http://localhost:3001/generate/folder/${folderId}`, {
+        const response = await axios.get(`https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/folder/${folderId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Accept': 'application/json',
