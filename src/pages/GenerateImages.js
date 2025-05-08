@@ -33,9 +33,9 @@ export default function GenerateImages() {
       let endpoint 
       
       if (viewMode === 'public') {
-        endpoint = 'https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/public/' ;
+        endpoint = 'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/public/' ;
       } else if (viewMode === 'gallery') {
-        endpoint = 'https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/gallery/' ;
+        endpoint = 'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/gallery/' ;
       }
       console.log('Fetching from endpoint:', endpoint);
 
@@ -63,7 +63,7 @@ export default function GenerateImages() {
   const fetchFolders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('https://2e37-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/folders', {
+      const response = await axios.get('https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/folders', {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ export default function GenerateImages() {
       const currentPrompt = prompt || "Generated Image"; // Fallback if prompt is empty
 
       await axios.post(
-        'http://localhost:3001/generate/save',
+        'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/save',
         {
           prompt: currentPrompt,
           selectedImages: selectedImageData
@@ -196,7 +196,7 @@ export default function GenerateImages() {
       const currentPrompt = prompt || "Generated Image"; // Fallback if prompt is empty
 
       await axios.post(
-        'http://localhost:3001/generate/save',
+        'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/save',
         {
           prompt: currentPrompt,
           selectedImages: selectedImageData
@@ -240,7 +240,7 @@ export default function GenerateImages() {
       // If the image is already saved, update its favorite status
       if (imageId !== `temp-${imageIndex}`) {
         await axios.post(
-          'http://localhost:3001/generate/toggle-favorite',
+          'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/toggle-favorite',
           {
             generateId: imageId,
             imageIndex: parseInt(imageIndex)
@@ -268,7 +268,7 @@ export default function GenerateImages() {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:3001/generate/create-folder',
+        'https://9c56-2405-201-202e-b0f1-d91e-dfe3-c401-d4c1.ngrok-free.app/generate/create-folder',
         {
           folderName: newFolderName.trim()
         },
